@@ -1,0 +1,49 @@
+.clab-settings-group {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-family: Tahoma, sans-serif;
+}
+
+.clab-settings-group form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.clab-settings-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.clab-settings-group input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.clab-button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.clab-button-wrapper .button {
+    padding: 10px 25px;
+    background-color: #2271b1;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.clab-button-wrapper .button:hover {
+    background-color: #1d5d91;
+    color: #fff;
+}

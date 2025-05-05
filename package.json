@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^7.0.2",
+    "postcss": "^8.3.0",
+    "postcss-cli": "^11.0.1"
+  },
+  "scripts": {
+    "build": "postcss assets/css/main.css -o assets/css/main.min.css"
+  }
+}
