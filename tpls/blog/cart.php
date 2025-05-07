@@ -3,11 +3,11 @@
 
                             <!-- فضای تصویر -->
                             <div class="my-card-img-container">
-                                <?php if (has_post_thumbnail()): ?>
+                               
                                     <a href="<?php the_permalink(); ?>">
                                         <?php the_post_thumbnail('large', ['class' => 'w-100 rounded']); ?>
                                     </a>
-                                <?php endif; ?>
+                               
                             </div>
 
                             <!-- بدنه کارت -->

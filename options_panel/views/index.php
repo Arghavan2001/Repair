@@ -1,18 +1,24 @@
 <div class="wrap">
 
-    <h2 class="fTitle"> تنظیمات قالب clab </h2>
+    <h2 class="fTitle"> تنظیمات قالب Repair </h2>
     <div class="container">
 
 
         <div class="clab-settings-group">
             <form method="post" enctype="multipart/form-data">
-                <label for="site-title">عنوان وبسایت</label>
-                <input type="text" name="site-title" id="site-title"
-                    value="<?= isset($clab_options['site-title']) ? esc_attr($clab_options['site-title']) : '' ?>">
 
-                <label for="site-logo">لوگو سایت</label>
-                <img src="<?= isset($clab_options['site-logo']) ? esc_url($clab_options['site-logo']) : '' ?>" alt="لوگو سایت">
-                <input type="file" name="site-logo" id="site-logo">
+
+                <label for="site-img"> عکس صفحه اصلی</label>
+                <img src="<?= isset($clab_options['site-img']) ? esc_url($clab_options['site-img']) : '' ?>"
+                    alt="عکس سایت">
+                <input type="file" name="site-img" id="site-img">
+                <?php if (!empty($clab_options['site-img'])): ?>
+                    <label>
+                        <input type="checkbox" name="delete-site-img" value="1">
+                        حذف تصویر فعلی
+                    </label>
+                <?php endif; ?>
+
 
                 <label for="site-phone">شماره تماس</label>
                 <input type="text" name="site-phone" id="site-phone"

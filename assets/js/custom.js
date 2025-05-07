@@ -132,7 +132,4 @@ $('#request-form').on('submit', function (e) {
   }
 });
 
-
-
-  
 });

@@ -27,17 +27,17 @@ function save_clab_options(){
     
        
             $clab_options= [
-                'site-title' => sanitize_text_field($_POST['site-title']),
+               
                 'site-phone' => sanitize_text_field($_POST['site-phone']),
                 'site-address' => sanitize_text_field($_POST['site-address']),
                 'site-time' => sanitize_text_field($_POST['site-time'])
         
             ];
       
-            // چک کردن آپلود لوگو
-    if ( isset( $_FILES['site-logo'] ) && ! empty( $_FILES['site-logo']['name'] ) ) {
+            // چک کردن آپلود عکس
+    if ( isset( $_FILES['site-img'] ) && ! empty( $_FILES['site-img']['name'] ) ) {
         // تنظیمات آپلود
-        $uploaded_file = $_FILES['site-logo'];
+        $uploaded_file = $_FILES['site-img'];
 
         // بارگذاری توابع مورد نیاز وردپرس برای آپلود فایل
         require_once( ABSPATH . 'wp-admin/includes/file.php' );
@@ -55,12 +55,17 @@ function save_clab_options(){
             $logo_url = $movefile['url'];
 
             // ذخیره آدرس فایل در تنظیمات
-            $clab_options['site-logo'] = $logo_url;
+            $clab_options['site-img'] = $logo_url;
         } else {
             // در صورت خطا
             echo 'خطا در آپلود فایل: ' . $movefile['error'];
         }
     }
+
+    // اگر کاربر گزینه حذف تصویر رو انتخاب کرده بود
+if ( isset($_POST['delete-site-img']) && $_POST['delete-site-img'] == '1' ) {
+    unset($clab_options['site-img']);
+}
 
         
     update_option('clab-options', $clab_options);

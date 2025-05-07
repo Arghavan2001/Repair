@@ -9,11 +9,16 @@ add_filter('show_admin_bar', '__return_false');
 function load_clab_styles() {
     wp_enqueue_style('main', ASSETS_URL . 'css/main.css');
     wp_enqueue_style('custom', ASSETS_URL . 'css/custom.css',['main']);
+
+
+    wp_enqueue_script('three', 'https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js', array(), null, true);
+    wp_enqueue_script('vanta-js', 'https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.topology.min.js', ['three'], null, true);
+
     wp_enqueue_script('jquery');
     wp_enqueue_script('wow', ASSETS_URL . 'vendor/wow.min.js',['jquery'], null, true);
 	wp_enqueue_script('main-js', ASSETS_URL . 'js/main.js',['jquery','wow'], null, true);
 	wp_enqueue_script('persianumber', ASSETS_URL . 'js/persianumber.js',['main-js'], null, true);
-	wp_enqueue_script('custom-js', ASSETS_URL . 'js/custom.js',['main-js'], null, true);
+	wp_enqueue_script('custom-js', ASSETS_URL . 'js/custom.js',['main-js','vanta-js'], null, true);
     wp_localize_script('custom-js', 'my_ajax',['ajax_url' => admin_url('admin-ajax.php')]);
 }
 add_action('wp_enqueue_scripts', 'load_clab_styles');
@@ -25,7 +30,7 @@ function setup(){
 	
     add_theme_support('title_tag');
     add_theme_support('post-thumbnails');
-    add_theme_support('woocommerce');
+    add_theme_support( 'custom-logo' );
     add_image_size('thumb', 730, 830 ,true);
 	register_nav_menus([
         'top' => 'منوی بالا',

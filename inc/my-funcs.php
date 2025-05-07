@@ -3,11 +3,20 @@
 //تصویر پیشفرض  برای thumbnail
 function set_default_post_thumbnail_if_empty($html, $post_id, $post_thumbnail_id, $size, $attr)
 {
-    if (empty($html)) {
-        $default_image_url = ASSETS_URL . 'img/thum/ChatGPT Image Apr 17, 2025, 11_39_13 AM.png';
-        $alt = get_the_title($post_id);
-        $class = isset($attr['class']) ? esc_attr($attr['class']) : 'default-thumbnail';
-        $html = '<img src="' . esc_url($default_image_url) . '" alt="' . esc_attr($alt) . '" class="' . $class . '" />';
+    if (get_post_type($post_id) === 'service') {
+        if (empty($html) || strpos($html, 'default-thumbnail') !== false) {
+            $default_image_url = ASSETS_URL . 'img/main/thums/ChatGPT Image Apr 17, 2025, 11_39_13 AM.png';
+            $alt = get_the_title($post_id);
+            $class = isset($attr['class']) ? esc_attr($attr['class']) : 'default-thumbnail-service';
+            $html = '<img src="' . esc_url($default_image_url) . '" alt="' . esc_attr($alt) . '" class="' . $class . '" />';
+        }
+    } elseif (get_post_type($post_id) === 'education') { // برای پست تایپ آموزش‌ها
+        if (empty($html) || strpos($html, 'default-thumbnail') !== false) {
+            $default_image_url = ASSETS_URL . 'img/main/thums/male-worker-wearing-work-clothes.jpg'; // تصویر پیش‌فرض آموزش‌ها
+            $alt = get_the_title($post_id);
+            $class = isset($attr['class']) ? esc_attr($attr['class']) : 'default-thumbnail-education';
+            $html = '<img src="' . esc_url($default_image_url) . '" alt="' . esc_attr($alt) . '" class="' . $class . '" />';
+        }
     }
     return $html;
 }
@@ -148,18 +157,18 @@ function custom_comment_callback($comment, $args, $depth)
             ], $comment);
             ?>
         </div>
-        
-        <?php if ($args['has_children']) : ?>
+
+        <?php if ($args['has_children']): ?>
             <div class="children">
-        <?php endif; ?>
+            <?php endif; ?>
 
 
 
 
-    <?php
+            <?php
 }
 
-function end_custom_comment_callback($comment, $args, $depth) : void
+function end_custom_comment_callback($comment, $args, $depth): void
 {
     if ($args['has_children']) {
         echo '</div>'; // بستن فقط در صورت وجود children
@@ -195,8 +204,8 @@ function getRelatedPosts($postId, $categoryIds = [], $count = 3)
             $relatedPostCollection[] = [
                 'ID' => get_the_ID(),
                 'title' => get_the_title(),
-                'category' => implode(', ', wp_list_pluck(get_the_category(), 'name')),
-                'thumbnail' => get_the_post_thumbnail(get_the_ID(), 'thumb'),
+                'categories' => get_the_category(),
+                'thumbnail' => get_the_post_thumbnail(get_the_ID(), 'large', ['class' => 'w-100 rounded']),
                 'thumbnail-url' => get_the_post_thumbnail_url(),
                 'link' => get_the_permalink(),
                 'excerpt' => get_the_excerpt(),

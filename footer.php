@@ -62,7 +62,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <span class="copyright">  تمام حقوق برای <?= clab_options()['site-title'] ?> محفوظ است.</span>
+                    <span class="copyright">  تمام حقوق برای <?= get_bloginfo( 'name' ) ?> محفوظ است.</span>
                 </div>
             </div>
         </div>
