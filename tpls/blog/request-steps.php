@@ -4,7 +4,7 @@
         <div class="col-6 col-lg-3 mb-4 mb-lg-0 feature-group animate__zoomIn wow step">
             <div class="step-item wow fadeInUp" data-wow-duration="0.5s">
                 <div class="step-image">
-                    <img src="<?= ASSETS_URL ?>img/logos/phone.png" class="attachment-full size-full" alt=""
+                    <img src="<?= ASSETS_URL ?>img/main/icons/phone.png" class="attachment-full size-full" alt=""
                         decoding="async" loading="lazy">
                 </div>
                 <h4> ثبت درخواست </h4>
@@ -22,7 +22,7 @@
         <div class="col-6 col-lg-3 mb-4 mb-lg-0 feature-group animate__zoomIn wow step">
             <div class="step-item wow fadeInUp" data-wow-duration="1.5s">
                 <div class="step-image">
-                    <img src="<?= ASSETS_URL ?>img/logos/receptionist.png" class="attachment-full size-full" alt=""
+                    <img src="<?= ASSETS_URL ?>img/main/icons/receptionist.png" class="attachment-full size-full" alt=""
                         decoding="async" loading="lazy">
                 </div>
                 <h4>هماهنگی کارشناسان با شما</h4>
@@ -32,7 +32,7 @@
         <div class="col-6 col-lg-3 mb-4 mb-lg-0 feature-group animate__zoomIn wow step">
             <div class="step-item wow fadeInUp" data-wow-duration="2.5s">
                 <div class="step-image">
-                    <img src="<?= ASSETS_URL ?>img/logos/phone.png" class="attachment-full size-full" alt=""
+                    <img src="<?= ASSETS_URL ?>img/main/icons/phone.png" class="attachment-full size-full" alt=""
                         decoding="async" loading="lazy">
                 </div>
                 <h4> اعلام هزینه </h4>
@@ -42,7 +42,7 @@
         <div class="col-6 col-lg-3 mb-4 mb-lg-0 feature-group animate__zoomIn wow step">
             <div class="step-item wow fadeInUp" data-wow-duration="3.5s">
                 <div class="step-image">
-                    <img src="<?= ASSETS_URL ?>img/logos/receptionist.png" class="attachment-full size-full" alt=""
+                    <img src="<?= ASSETS_URL ?>img/main/icons/receptionist.png" class="attachment-full size-full" alt=""
                         decoding="async" loading="lazy">
                 </div>
                 <h4>تست دستگاه و پایان سفارش </h4>

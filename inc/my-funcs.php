@@ -5,14 +5,14 @@ function set_default_post_thumbnail_if_empty($html, $post_id, $post_thumbnail_id
 {
     if (get_post_type($post_id) === 'service') {
         if (empty($html) || strpos($html, 'default-thumbnail') !== false) {
-            $default_image_url = ASSETS_URL . 'img/main/thums/ChatGPT Image Apr 17, 2025, 11_39_13 AM.png';
+            $default_image_url = ASSETS_URL . 'img/main/thums/8806258.jpg';
             $alt = get_the_title($post_id);
             $class = isset($attr['class']) ? esc_attr($attr['class']) : 'default-thumbnail-service';
             $html = '<img src="' . esc_url($default_image_url) . '" alt="' . esc_attr($alt) . '" class="' . $class . '" />';
         }
     } elseif (get_post_type($post_id) === 'education') { // برای پست تایپ آموزش‌ها
         if (empty($html) || strpos($html, 'default-thumbnail') !== false) {
-            $default_image_url = ASSETS_URL . 'img/main/thums/male-worker-wearing-work-clothes.jpg'; // تصویر پیش‌فرض آموزش‌ها
+            $default_image_url = ASSETS_URL . 'img/main/thums/def-thum.webp'; // تصویر پیش‌فرض آموزش‌ها
             $alt = get_the_title($post_id);
             $class = isset($attr['class']) ? esc_attr($attr['class']) : 'default-thumbnail-education';
             $html = '<img src="' . esc_url($default_image_url) . '" alt="' . esc_attr($alt) . '" class="' . $class . '" />';

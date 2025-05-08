@@ -69,22 +69,11 @@
     </div>
 </footer>
 <!--footer end-->
-<script src="<?= ASSETS_URL ?>vendor/jquery/jquery.min.js"></script>
+
 <?= get_template_part('tpls/blog/form'); ?>
 <?php wp_footer(); ?>
-<!--basic scripts-->
 
-<script src="<?= ASSETS_URL ?>vendor/popper.min.js"></script>
-<script src="<?= ASSETS_URL ?>vendor/bootstrap/js/bootstrap.min.js"></script>
-<script src="<?= ASSETS_URL ?>vendor/vl-nav/js/vl-menu.js"></script>
-<script src="<?= ASSETS_URL ?>vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-<script src="<?= ASSETS_URL ?>vendor/owl/owl.carousel.min.js"></script>
-<script src="<?= ASSETS_URL ?>vendor/jquery.animateNumber.min.js"></script>
-<script src="<?= ASSETS_URL ?>vendor/jquery.countdown.min.js"></script>
-<script src="<?= ASSETS_URL ?>vendor/typist.js"></script>
-<script src="<?= ASSETS_URL ?>vendor/jquery.isotope.js"></script>
-<script src="<?= ASSETS_URL ?>vendor/imagesloaded.js"></script>
-<script src="<?= ASSETS_URL ?>vendor/visible.js"></script>
+
 
 
 

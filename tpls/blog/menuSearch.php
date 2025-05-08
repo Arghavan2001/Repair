@@ -21,10 +21,10 @@
    
         
           <div class="col-6">
-          <div class="search-box left">
+          <div class="left" id="search-box">
           <form method="get" action="<?= esc_url( home_url('/') ); ?>">
           <button class="search-icon" type="submit"><i class="fas fa-search"></i></button>
-          <input type="text" placeholder="جستجو..." class="search-input"  name="s">
+          <input type="text" placeholder="جستجو..." id="search-input"  name="s">
           </form>
 </div>
 

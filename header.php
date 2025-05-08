@@ -9,24 +9,16 @@
     <meta name="author" content="Mosaddek">
 
     <!--favicon icon-->
-    <link rel="icon" type="image/png" href="assets/img/favicon.png">
-
+    <?php if ( has_site_icon() ): ?>
+    <link rel="icon" type="image/png" href="<?= get_site_icon_url() ?>">
+    <?php else : ?>
+    <link rel="icon" type="image/webp" href="<?= ASSETS_URL ?>img/main/logo/default-logo.webp">
+    <?php endif;?>
     <?php wp_head(); ?>
 
     <!--web fonts-->
 
-    <!--basic styles-->
-    <link href="<?= ASSETS_URL ?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?= ASSETS_URL ?>vendor/fontawesome/css/all.min.css" rel="stylesheet">
-    <link href="<?= ASSETS_URL ?>vendor/custom-icon/style.css" rel="stylesheet">
-    <link href="<?= ASSETS_URL ?>vendor/vl-nav/css/core-menu.css" rel="stylesheet">
-    <link href="<?= ASSETS_URL ?>vendor/animate.min.css" rel="stylesheet">
-    <link href="<?= ASSETS_URL ?>vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
-    <link href="<?= ASSETS_URL ?>vendor/owl/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="<?= ASSETS_URL ?>vendor/owl/assets/owl.theme.default.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <!--custom styles-->
 
 
     <!--[if (gt IE 9) |!(IE)]><!-->

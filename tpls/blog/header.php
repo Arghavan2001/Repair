@@ -46,8 +46,12 @@ $site_phone = clab_options()['site-phone'];
                             <i class="fas fa-phone-alt"></i> <!-- آیکون تلفن -->
                             <span class="contact-number"><?= $site_phone ?></span> <!-- شماره -->
                         </div>
-                        <div class="contact-item"><button id="open-form" class="custom-btn btn-12"><span> بزن بریم...
-                                </span><span> ثبت درخواست </span></button></div>
+                        <div class="contact-item">
+                            <button id="open-form" class="custom-btn btn-12">
+                                <span> بزن بریم...</span>
+                                <span> ثبت درخواست </span>
+                            </button>
+                            </div>
                     </div>
 
 

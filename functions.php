@@ -7,18 +7,35 @@ add_filter('show_admin_bar', '__return_false');
 
 
 function load_clab_styles() {
+    //basic style
+    // Bootstrap
+    wp_enqueue_style('bootstrap', ASSETS_URL . 'vendor/bootstrap/css/bootstrap.min.css', [], null);
+
+    // FontAwesome (CDN)
+    wp_enqueue_style('fontawesome-cdn', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css', [], null);
+
+  
+
+
+
+    //custom styles
     wp_enqueue_style('main', ASSETS_URL . 'css/main.css');
     wp_enqueue_style('custom', ASSETS_URL . 'css/custom.css',['main']);
 
 
-    wp_enqueue_script('three', 'https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js', array(), null, true);
-    wp_enqueue_script('vanta-js', 'https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.topology.min.js', ['three'], null, true);
 
+    
+
+    // Enqueue basic scripts
     wp_enqueue_script('jquery');
-    wp_enqueue_script('wow', ASSETS_URL . 'vendor/wow.min.js',['jquery'], null, true);
-	wp_enqueue_script('main-js', ASSETS_URL . 'js/main.js',['jquery','wow'], null, true);
-	wp_enqueue_script('persianumber', ASSETS_URL . 'js/persianumber.js',['main-js'], null, true);
-	wp_enqueue_script('custom-js', ASSETS_URL . 'js/custom.js',['main-js','vanta-js'], null, true);
+    wp_enqueue_script('bootstrap', ASSETS_URL . 'vendor/bootstrap/js/bootstrap.min.js', ['popper'], null, true);
+   
+
+    
+    // Enqueue custom scripts
+    
+	wp_enqueue_script('main-js', ASSETS_URL . 'js/main.js',['jquery'], null, true);
+	wp_enqueue_script('custom-js', ASSETS_URL . 'js/custom.js',['main-js'], null, true);
     wp_localize_script('custom-js', 'my_ajax',['ajax_url' => admin_url('admin-ajax.php')]);
 }
 add_action('wp_enqueue_scripts', 'load_clab_styles');
@@ -42,20 +59,7 @@ function setup(){
 endif;
 add_action('after_setup_theme', 'setup');
 
-if(!function_exists('registerSidebar')):
-function registerSidebar() {
-	register_sidebar( array(
-		'name'          => __( 'Main Sidebar', 'textdomain' ),
-		'id'            => 'sidebar-1',
-		'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'textdomain' ),
-		'before_widget' => '<div class="blog-widget mb-4">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h6 class="mb-4">',
-		'after_title'   => '</h6>',
-	) );
-}
-endif;
-add_action('widgets_init', 'registerSidebar');
+
 
 
 
