@@ -8,8 +8,8 @@ $options = clab_options();
     <h1>تماس با ما</h1>
 
     <div class="contact-item">
-        <div class="contact-icon">📞</div>
-        <div><?= esc_html($options['site-phone']) ?></div>
+    <i class="fas fa-phone-alt contact-icon"></i> 
+        <div class="contact-number"><?= esc_html($options['site-phone']) ?></div>
     </div>
 
     <div class="contact-item">

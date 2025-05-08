@@ -28,9 +28,9 @@ function save_clab_options(){
        
             $clab_options= [
                
-                'site-phone' => sanitize_text_field($_POST['site-phone']),
-                'site-address' => sanitize_text_field($_POST['site-address']),
-                'site-time' => sanitize_text_field($_POST['site-time'])
+                'site-phone' => (isset($_POST['site-phone']) && !empty($_POST['site-phone'])) ? sanitize_text_field($_POST['site-phone']) : 'شماره شما',
+                'site-address' => (isset($_POST['site-address']) && !empty($_POST['site-address'])) ? sanitize_text_field($_POST['site-address']) : 'آدرس شما',
+                'site-time' => (isset($_POST['site-time']) && !empty($_POST['site-time'])) ? sanitize_text_field($_POST['site-time']) : 'ساعت کار شما'
         
             ];
       
