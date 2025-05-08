@@ -218,3 +218,144 @@ function getRelatedPosts($postId, $categoryIds = [], $count = 3)
     return $relatedPostCollection;
 }
 
+
+
+function mytheme_create_default_posts() {
+    // فقط یک بار اجرا بشه
+    if (get_option('mytheme_default_posts_created')) {
+        return;
+    }
+
+    // ایجاد پست پیش‌فرض
+    wp_insert_post([
+        'post_title'   => 'آموزش نمونه اول',
+        'post_content' => 'این یک آموزش پیش‌فرض است.',
+        'post_status'  => 'publish',
+        'post_type'    => 'education'
+    ]);
+    wp_insert_post([
+        'post_title'   => 'آموزش نمونه اول',
+        'post_content' => 'این یک آموزش پیش‌فرض است.',
+        'post_status'  => 'publish',
+        'post_type'    => 'education'
+    ]);
+    wp_insert_post([
+        'post_title'   => 'آموزش نمونه اول',
+        'post_content' => 'این یک آموزش پیش‌فرض است.',
+        'post_status'  => 'publish',
+        'post_type'    => 'education'
+    ]);
+    wp_insert_post([
+        'post_title'   => 'آموزش نمونه اول',
+        'post_content' => 'این یک آموزش پیش‌فرض است.',
+        'post_status'  => 'publish',
+        'post_type'    => 'education'
+    ]);
+    wp_insert_post([
+        'post_title'   => 'آموزش نمونه اول',
+        'post_content' => 'این یک آموزش پیش‌فرض است.',
+        'post_status'  => 'publish',
+        'post_type'    => 'education'
+    ]);
+    wp_insert_post([
+        'post_title'   => 'آموزش نمونه اول',
+        'post_content' => 'این یک آموزش پیش‌فرض است.',
+        'post_status'  => 'publish',
+        'post_type'    => 'education'
+    ]);
+    wp_insert_post([
+        'post_title'   => 'آموزش نمونه اول',
+        'post_content' => 'این یک آموزش پیش‌فرض است.',
+        'post_status'  => 'publish',
+        'post_type'    => 'education'
+    ]);
+    wp_insert_post([
+        'post_title'   => 'آموزش نمونه اول',
+        'post_content' => 'این یک آموزش پیش‌فرض است.',
+        'post_status'  => 'publish',
+        'post_type'    => 'education'
+    ]);
+    wp_insert_post([
+        'post_title'   => 'آموزش نمونه اول',
+        'post_content' => 'این یک آموزش پیش‌فرض است.',
+        'post_status'  => 'publish',
+        'post_type'    => 'education'
+    ]);
+    wp_insert_post([
+        'post_title'   => 'آموزش نمونه اول',
+        'post_content' => 'این یک آموزش پیش‌فرض است.',
+        'post_status'  => 'publish',
+        'post_type'    => 'education'
+    ]);
+    wp_insert_post([
+        'post_title'   => 'آموزش نمونه اول',
+        'post_content' => 'این یک آموزش پیش‌فرض است.',
+        'post_status'  => 'publish',
+        'post_type'    => 'education'
+    ]);
+    wp_insert_post([
+        'post_title'   => 'آموزش نمونه اول',
+        'post_content' => 'این یک آموزش پیش‌فرض است.',
+        'post_status'  => 'publish',
+        'post_type'    => 'education'
+    ]);
+    wp_insert_post([
+        'post_title'   => 'آموزش نمونه اول',
+        'post_content' => 'این یک آموزش پیش‌فرض است.',
+        'post_status'  => 'publish',
+        'post_type'    => 'education'
+    ]);
+
+    wp_insert_post([
+        'post_title'   => 'سرویس نمونه اول',
+        'post_content' => 'محتوای دیگری برای تست.',
+        'post_status'  => 'publish',
+        'post_type'    => 'service'
+    ]);
+    wp_insert_post([
+        'post_title'   => 'سرویس نمونه اول',
+        'post_content' => 'محتوای دیگری برای تست.',
+        'post_status'  => 'publish',
+        'post_type'    => 'service'
+    ]);
+    wp_insert_post([
+        'post_title'   => 'سرویس نمونه اول',
+        'post_content' => 'محتوای دیگری برای تست.',
+        'post_status'  => 'publish',
+        'post_type'    => 'service'
+    ]);
+    wp_insert_post([
+        'post_title'   => 'سرویس نمونه اول',
+        'post_content' => 'محتوای دیگری برای تست.',
+        'post_status'  => 'publish',
+        'post_type'    => 'service'
+    ]);
+    wp_insert_post([
+        'post_title'   => 'سرویس نمونه اول',
+        'post_content' => 'محتوای دیگری برای تست.',
+        'post_status'  => 'publish',
+        'post_type'    => 'service'
+    ]);
+    wp_insert_post([
+        'post_title'   => 'سرویس نمونه اول',
+        'post_content' => 'محتوای دیگری برای تست.',
+        'post_status'  => 'publish',
+        'post_type'    => 'service'
+    ]);
+    wp_insert_post([
+        'post_title'   => 'سرویس نمونه اول',
+        'post_content' => 'محتوای دیگری برای تست.',
+        'post_status'  => 'publish',
+        'post_type'    => 'service'
+    ]);
+    wp_insert_post([
+        'post_title'   => 'سرویس نمونه اول',
+        'post_content' => 'محتوای دیگری برای تست.',
+        'post_status'  => 'publish',
+        'post_type'    => 'service'
+    ]);
+
+    // جلوگیری از اجرای مجدد
+    update_option('mytheme_default_posts_created', true);
+}
+add_action('after_switch_theme', 'mytheme_create_default_posts');
